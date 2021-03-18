@@ -1,0 +1,12 @@
+.admin-app-title {
+  color: var(--color-green-dark);
+  margin-bottom: 20px;
+}
+
+.MuiGrid-spacing-xs-3 {
+  justify-content: center !important;
+}
+
+.makeStyles-root-1 {
+  width: 100% !important;
+}

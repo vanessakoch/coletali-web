@@ -1,0 +1,29 @@
+.list-menu {
+  display: flex;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding: 8px 24px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.MuiTableCell-root {
+  font-size: 1.2rem !important;
+}
+
+.list-menu:hover {
+  background-color: rgba(63, 81, 181, 0.04);
+}
+
+.MuiListItemIcon-root {
+  color: rgba(0, 0, 0, 0.87);;
+}
+
+.MuiTypography-body1 {
+  color: rgba(0, 0, 0, 0.87);;
+  font-weight: bold !important;
+  font-size: 12px !important;
+}

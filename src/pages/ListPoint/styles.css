@@ -1,0 +1,45 @@
+#page-list-point {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.list-toolbar {
+  display: block;
+  margin: 10px 0;
+}
+
+.list-toolbar h2 {
+  text-align: center;
+}
+
+.MuiButton-root, .MuiInputBase-input, .MuiMenuItem-root {
+  font: 500 1.4rem Nunito !important;
+}
+
+.MuiInputBase-input, .MuiMenuItem-root {
+  text-align: center
+}
+
+.MuiInputLabel-outlined {
+  font: 1rem Nunito
+}
+
+.MuiTableContainer-root {
+  margin: 40px auto;
+  padding: 10px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: 20px;  
+}
+
+@media (max-width: 500px) {
+  #page-list-point {
+    max-width: 400px;
+  }
+
+  #page-list-point form {
+    padding: 20px;
+  }
+}

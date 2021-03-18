@@ -1,0 +1,76 @@
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-offwhite: #EFEFEF;
+
+  --color-gray-darker: #3B3B3B;
+  --color-gray-dark: #605D5D;
+  --color-gray-light: #8b8989;
+  --color-gray-lighter: #C2C2C2;
+
+  --color-green-darker: #3E4D03;
+  --color-green-dark: #038B43;
+  --color-green-light: #C6EF21;
+  --color-green-lighter: #e8ff8a;
+
+  --color-yellow-darker: #D18E00;
+  --color-yellow-dark: #F4A500;
+  --color-yellow-light: #FFD000;
+  --color-yellow-lighter: #FFEC99;
+
+  --color-blue-darker: #012032;
+  --color-blue-dark: #01446B;
+  --color-blue-light: #005B8F;
+  --color-blue-lighter: #34B4FF;
+
+  --color-blue-img: #00CA9A;
+  --color-purple-img: #C7008B;
+  --color-purple-lighter: #EFDDD8;
+  --color-brown-img: #C96336;
+  --color-green-img: #A6E700;
+
+
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+textarea {
+  font: 500 1.6rem Nunito;
+  color: var(--color-gray-dark);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--color-gray-darker);
+}
+
+.container-alert {
+  color: white;
+  background-color: var(--color-gray-dark);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+
+.container {
+  width: 90vw;
+  max-width: 700px;
+}
+
+.MuiTypography-body2, body {
+  font-size: 60% !important;
+  font: 500 1.6rem Nunito !important;
+  color: var(--color-gray-dark) !important;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}

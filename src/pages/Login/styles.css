@@ -1,0 +1,106 @@
+#page-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#page-login aside {
+  display: block;
+  width: 50%;
+}
+
+.auth-img {
+  width: 100%;
+}
+
+.title-login {
+  margin: 50px 0;
+}
+
+.MuiOutlinedInput-root {
+  margin: 10px 0;
+}
+
+.btn-container {
+  width: 100%;
+  margin: 10px 0;
+}
+
+
+
+.btn-container .submit {
+  width: 100%;
+  height: 5.4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-gray-darker);
+  transition: background-color 0.2s;
+  border: solid 2px var(--color-yellow-light);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px
+}
+
+.btn-container button span {
+  margin-left: 1.6rem;
+}
+
+.btn-container button.submit {
+  background: var(--color-yellow-light);
+  width: 100%;
+}
+
+.btn-container button.submit:hover {
+  border: solid 2px var(--color-yellow-darker);
+}
+
+.MuiTypography-root {
+  margin-top: 10px !important;
+}
+
+.link-forgot-password, .MuiCheckbox-colorPrimary.Mui-checked {
+  color: var(--color-blue-light);
+  text-decoration: none;
+}
+
+.link-account {
+  color: var(--color-purple-img);
+  text-decoration: none;
+  font-size: 60% !important;
+  font: 500 1.6rem Nunito !important;
+  float: right;
+}
+
+#page-login .aside-goback {
+  color: var(--color-gray-lighter);
+  font-weight: bold;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  outline: none;
+}
+
+#page-login .aside-goback svg {
+  margin: 0 16px;
+  color: var(--color-gray-lighter);
+}
+
+#page-login .aside-goback:hover {
+  color: var(--color-gray-light);
+}
+
+@media (max-width: 850px) {
+  #page-login aside {
+    display: none;
+  }
+}

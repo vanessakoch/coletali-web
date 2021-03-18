@@ -1,0 +1,168 @@
+#page-edit-user {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#page-edit-user form {
+  margin: 40px auto;
+  padding: 50px;
+  max-width: 1100px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-edit-user form h1 {
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#page-edit-user form fieldset {
+  margin-top: 64px;
+  min-inline-size: auto;
+  border: 0;
+}
+
+#page-edit-user form legend {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#page-edit-user form legend h2 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+#page-edit-user form legend span {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--color-gray-dark);
+}
+
+#page-edit-user form .field-group {
+  flex: 1;
+  display: flex;
+}
+
+#page-edit-user form .field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+#page-edit-user form .field input[type=text],
+#page-edit-user form .field input[type=email],
+#page-edit-user form .field input[type=number],
+#page-edit-user form .field input[type=password] {
+  flex: 1;
+  background: var(--color-offwhite);
+  border-radius: 8px;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: var(--color-gray-dark);
+  width: 100%;
+}
+
+#page-edit-user form .field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  flex: 1;
+  background: var(--color-offwhite);
+  border-radius: 8px;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: var(--color-gray-light);
+  width: 100%;
+}
+
+#page-edit-user form .field input::placeholder {
+  color: var(--color-offwhite);
+}
+
+#page-edit-user form .field label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#page-edit-user form .field :disabled {
+  cursor: not-allowed;
+}
+
+#page-edit-user form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+#page-edit-user form .field-group input + input {
+  margin-left: 24px;
+}
+
+#page-edit-user form .field-check {
+  flex-direction: row;
+  align-items: center;
+}
+
+#page-edit-user form .field-check input[type=checkbox] {
+  background: var(--color-offwhite);
+}
+
+#page-edit-user form .field-check label {
+  margin: 0 0 0 8px;
+}
+
+
+#page-edit-user form button {
+  width: 260px;
+  height: 56px;
+  background: var(--color-yellow-light);
+  border-radius: 8px;
+  color: var(--color-gray-darker);
+  font-weight: bold;
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+  align-self: center;
+  margin: 40px 0;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+#page-edit-user form button:hover {
+  border: 2px solid var(--color-yellow-darker);
+}
+
+#page-edit-user form .icon-signature {
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+#page-edit-user form .icon-signature a {
+  text-decoration: none;
+  color: var(--color-blue-light);
+}
+
+@media (max-width: 550px) {
+  #page-edit-user {
+    max-width: 400px !important;
+  }
+
+  #page-edit-user form {
+    padding: 20px;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

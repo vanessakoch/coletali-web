@@ -1,0 +1,32 @@
+#menubar header {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menubar header a {
+  color: var(--color-gray-darker);
+  font-weight: bold;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  outline: none;
+}
+#menubar header p {
+  margin-left: 10px;
+  color: var(--color-green-dark)
+}
+
+#menubar header a:hover, #menubar header a svg:hover {
+  color: var(--color-gray-light);
+}
+
+#menubar header a svg {
+  font-weight: bold;
+  margin-right: 16px;
+  color: var(--color-gray-dark);
+}

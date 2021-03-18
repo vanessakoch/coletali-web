@@ -1,0 +1,41 @@
+#page-signup {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  margin: 2em auto;
+  background-color: white;
+}
+
+#page-signup aside {
+  background-color: #FFF;
+  display: block;
+  width: 50%;
+}
+
+#page-signup .aside-goback {
+  color: var(--color-gray-lighter);
+  font-weight: bold;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  outline: none;
+}
+
+#page-signup .aside-goback svg {
+  margin: 0 16px;
+  color: var(--color-gray-lighter);
+}
+
+#page-signup .aside-goback:hover {
+  color: var(--color-gray-light);
+}
+
+@media (max-width: 850px) {
+  #page-signup aside {
+    display: none;
+  }
+}

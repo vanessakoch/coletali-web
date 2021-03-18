@@ -1,0 +1,243 @@
+#page-create-point {
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#page-create-point form {
+  margin: 40px auto;
+  padding: 50px 164px;
+  max-width: 1100px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-create-point form h1 {
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#page-create-point form fieldset {
+  margin-top: 64px;
+  min-inline-size: auto;
+  border: 0;
+}
+
+#page-create-point form legend {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#page-create-point form legend h2 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+#page-create-point form legend span {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--color-gray-dark);
+}
+
+#page-create-point form .field-group {
+  flex: 1;
+  display: flex;
+}
+
+#page-create-point form .field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+#page-create-point form .field input[type=text],
+#page-create-point form .field input[type=email],
+#page-create-point form .field input[type=number],
+#page-create-point form .field input[type=password] {
+  flex: 1;
+  background: var(--color-offwhite);
+  border-radius: 8px;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: var(--color-gray-dark);
+  width: 100%;
+}
+
+#page-create-point form .field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  flex: 1;
+  background: var(--color-offwhite);
+  border-radius: 8px;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: var(--color-gray-light);
+  width: 100%;
+}
+
+#page-create-point form .field input::placeholder {
+  color: var(--color-offwhite);
+}
+
+#page-create-point form .field label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#page-create-point form .field :disabled {
+  cursor: not-allowed;
+}
+
+#page-create-point form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+#page-create-point form .field-group input + input {
+  margin-left: 24px;
+}
+
+#page-create-point form .field-check {
+  flex-direction: row;
+  align-items: center;
+}
+
+#page-create-point form .field-check input[type=checkbox] {
+  background: var(--color-offwhite);
+}
+
+#page-create-point form .field-check label {
+  margin: 0 0 0 8px;
+}
+
+#page-create-point form .leaflet-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+#page-create-point form button {
+  width: 260px;
+  height: 56px;
+  background: var(--color-yellow-light);
+  border-radius: 8px;
+  color: var(--color-gray-darker);
+  font-weight: bold;
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+  align-self: center;
+  margin: 40px 0;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+#page-create-point form button:hover {
+  border: 2px solid var(--color-yellow-darker);
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  list-style: none;
+}
+
+.items-grid li {
+  background: var(--color-offwhite);
+  border: 2px solid var(--color-offwhite);
+  border-radius: 8px;
+  padding: 32px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.items-grid li img {
+  width: 10vh;
+}
+
+.items-grid li span {
+  flex: 1;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-dark)
+}
+
+.items-grid li.selected {
+  background: var(--color-purple-lighter);
+  border: 2px solid var(--color-purple-img);
+}
+
+#page-create-point form .input-block + .input-block {
+  margin-top: 4px;
+}
+
+#page-create-point form .input-block label {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--color-gray-dark);
+}
+
+#page-create-point form .input-block .button-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  justify-items: center;
+}
+
+#page-create-point form .input-block .button-select button {
+  height: 64px;
+  background: var(--color-offwhite);
+  border: 1px solid var(--color-gray-lighter);
+  color: var(--color-gray-light);
+  cursor: pointer;
+  width: 100%;
+}
+
+#page-create-point form .input-block .button-select button.active {
+  background-color: var(--color-purple-lighter);
+  border: 2px solid var(--color-purple-img);
+  color: var(--color-gray-dark);
+}
+
+#page-create-point form .icon-signature {
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+#page-create-point form .icon-signature a {
+  text-decoration: none;
+  color: var(--color-blue-light);
+}
+
+@media (max-width: 500px) {
+  #page-create-point {
+    max-width: 400px !important;
+  }
+
+  #page-create-point form {
+    padding: 20px;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
