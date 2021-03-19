@@ -155,7 +155,7 @@ function CreatePoint() {
       dataPoint.append('whatsapp', whatsapp);
       dataPoint.append('items', items.join(','));
       dataPoint.append('user_id', user.id);
-      dataPoint.append('address_id', id_address)
+      dataPoint.append('address_id', Number(id_address))
   
       if (selectedFile) {
         dataPoint.append('image', selectedFile);
