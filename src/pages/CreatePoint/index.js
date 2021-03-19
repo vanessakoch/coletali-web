@@ -124,7 +124,7 @@ function CreatePoint() {
   }
 
   async function onSubmit(event) {
-    const { name, email, whatsapp, number} = inputData;
+    const { name, email, whatsapp, number } = inputData;
     const uf = selectedUf;
     const city = selectedCity;
     const [latitude, longitude] = selectedPosition;
@@ -138,47 +138,47 @@ function CreatePoint() {
       longitude
     };
 
-    let newAddress = api.post('address', dataAddress)
-      .then(response => {
-        return response.data.id
-      }).catch(err => {
-        alert.show('Verifique seus dados', { type: 'error' })
-      })
+    let newAddress = await api.post('address', dataAddress)
 
-    let id_address = await newAddress
+    if(!newAddress.data.id) {
+      alert.show('Verifique seus dados', { type: 'error' })
+      return new Error();
+    }
+
+    let id_address = newAddress.data.id
 
     const dataPoint = new FormData();
 
-    if(name !== '' && email !== '' && whatsapp !== '' && items.length !== 0 && selectedFile !== undefined) {
+    if (name !== '' && email !== '' && whatsapp !== '' && items.length !== 0 && selectedFile !== undefined) {
       dataPoint.append('name', name);
       dataPoint.append('email', email);
       dataPoint.append('whatsapp', whatsapp);
       dataPoint.append('items', items.join(','));
       dataPoint.append('user_id', user.id);
       dataPoint.append('address_id', Number(id_address))
-  
+
       if (selectedFile) {
         dataPoint.append('image', selectedFile);
       }
-      
+
       let response;
-  
+
       if (isDonationPoint) {
         response = await api.post('donate', dataPoint)
       } else {
         response = await api.post('collect', dataPoint)
       }
-  
+
       if (response.status === 200) {
         history.push('/app');
         alert.show('Ponto de coleta criado com sucesso!', { type: 'success' })
       } else {
         alert.show('Erro durante o cadastro, tente novamente', { type: 'error' })
-      }  
+      }
     } else {
       alert.show('Verifique os dados digitados', { type: 'error' })
     }
-    
+
   }
 
   return (
