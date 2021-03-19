@@ -139,14 +139,12 @@ function CreatePoint() {
     };
 
     let newAddress = await api.post('address', dataAddress)
-    console.log(newAddress)
     if(!newAddress.data.id) {
       alert.show('Verifique seus dados', { type: 'error' })
       return new Error();
     }
 
     let id_address = newAddress.data.id
-
     const dataPoint = new FormData();
 
     if (name !== '' && email !== '' && whatsapp !== '' && items.length !== 0 && selectedFile !== undefined) {
@@ -155,7 +153,7 @@ function CreatePoint() {
       dataPoint.append('whatsapp', whatsapp);
       dataPoint.append('items', items.join(','));
       dataPoint.append('user_id', user.id);
-      dataPoint.append('address_id', Number(id_address))
+      dataPoint.append('address_id', id_address);
 
       if (selectedFile) {
         dataPoint.append('image', selectedFile);
