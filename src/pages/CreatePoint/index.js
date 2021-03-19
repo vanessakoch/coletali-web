@@ -139,7 +139,7 @@ function CreatePoint() {
     };
 
     let newAddress = await api.post('address', dataAddress)
-
+    console.log(newAddress)
     if(!newAddress.data.id) {
       alert.show('Verifique seus dados', { type: 'error' })
       return new Error();
