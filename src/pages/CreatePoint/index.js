@@ -139,12 +139,13 @@ function CreatePoint() {
     };
 
     let newAddress = await api.post('address', dataAddress)
-    if(!newAddress.data.id) {
-      alert.show('Verifique seus dados', { type: 'error' })
-      return new Error();
-    }
+      .then(response => {
+        return response.data.id
+      }).catch(err => {
+        alert.show('Verifique seus dados', { type: 'error' })
+      })
 
-    let id_address = newAddress.data.id
+    let id_address = await newAddress.data.id
     const dataPoint = new FormData();
 
     if (name !== '' && email !== '' && whatsapp !== '' && items.length !== 0 && selectedFile !== undefined) {
