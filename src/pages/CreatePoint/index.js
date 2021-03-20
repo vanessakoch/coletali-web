@@ -142,10 +142,10 @@ function CreatePoint() {
       .then(response => {
         return response.data.id
       }).catch(err => {
-        alert.show('Verifique seus dados', { type: 'error' })
+        alert.show('Verifique seus dados, Erro: ' + err, { type: 'error' })
       })
 
-    let id_address = await newAddress.data.id
+    let id_address = await newAddress
     const dataPoint = new FormData();
 
     if (name !== '' && email !== '' && whatsapp !== '' && items.length !== 0 && selectedFile !== undefined) {
