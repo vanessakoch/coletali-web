@@ -30,7 +30,7 @@ function Home() {
       setUser(response.data[0])
     }
     getUser();
-  }, [])
+  }, [user])
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(position => {
