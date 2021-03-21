@@ -138,14 +138,15 @@ function CreatePoint() {
       longitude
     };
 
-    let newAddress = await api.post('address', dataAddress)
+    let newAddress = api.post('address', dataAddress)
       .then(response => {
         return response.data.id
       }).catch(err => {
-        alert.show('Verifique seus dados, Erro: ' + err, { type: 'error' })
+        alert.show('Verifique seus dados', { type: 'error' })
       })
 
     let id_address = await newAddress
+
     const dataPoint = new FormData();
 
     if (name !== '' && email !== '' && whatsapp !== '' && items.length !== 0 && selectedFile !== undefined) {
@@ -154,7 +155,7 @@ function CreatePoint() {
       dataPoint.append('whatsapp', whatsapp);
       dataPoint.append('items', items.join(','));
       dataPoint.append('user_id', user.id);
-      dataPoint.append('address_id', id_address);
+      dataPoint.append('address_id', id_address)
 
       if (selectedFile) {
         dataPoint.append('image', selectedFile);
