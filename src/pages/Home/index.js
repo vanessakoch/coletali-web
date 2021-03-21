@@ -200,13 +200,12 @@ function Home() {
               icon={mapIcon}
               position={[point.latitude, point.longitude]}
             >
-              <Popup className="map-popup" classButton={false} minWidth={240} maxWidth={240} >
+              <Popup className="map-popup" classButton={false}>
                 {point.name}
                 {point.class}
                 <Link to={`${pointType}/${point.id}`}>
-                  <FiArrowRight size={20} color="#FFF" />
+                  <FiArrowRight size={20} color="#000" />
                 </Link>
-
               </Popup>
             </Marker>
           )
