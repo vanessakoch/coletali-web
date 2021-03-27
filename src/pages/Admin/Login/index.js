@@ -76,7 +76,7 @@ export default function LoginAdmin() {
         if (getUser) {
           login(getUser);
           history.push('admin/dashboard');
-          alert.show('Salvo com sucesso!', { type: 'success' })
+          alert.show('Seja bem vindo(a)!', { type: 'success' })
         } else {
           alert.show('E-mail e senha incorretos', { type: 'error' })
         }
