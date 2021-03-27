@@ -8,7 +8,6 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { useAlert } from 'react-alert';
 import api from "../../services/api";
 import signinImg from '../../assets/images/signup.svg';
-
 import './styles.css';
 
 function Login() {
